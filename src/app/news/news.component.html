@@ -1,0 +1,55 @@
+<div class="container-fluid">
+  <div class="row bg-success justify-content-center
+            align-items-center">
+    <div class="col-3"></div>
+  </div>
+
+  <div class="source-line">
+    <div *ngFor="let category of categorys;">
+      <div class="item headder" (click)=' getData( category ) '>
+        {{ category }}
+      </div>
+    </div>
+    <div class="item headder" (click)="sort()">
+        Sort
+    </div>
+    <div class="item headder">
+      <input [(ngModel)]="paginationData">
+      <div class="button" (click)="pagination()">Ok</div>
+    </div>
+  </div>
+
+
+  <div *ngFor="let x of items; let index = index;"
+       class="row mt-1">
+
+    <div class="col-3 d-none col-md-3 d-md-block"></div>
+
+    <div class="col-12 col-md-6 bg-success d-flex
+                    justify-content-center align-items-center
+                    text-light h3 item" (click)="checkItem(index)">
+
+      <div class="col-9 text-light h3 author">
+        {{ x.author }}
+        <br/>
+        <br/>
+        {{ x.date | date :'short' }}
+      </div>
+
+      <div class="description">
+        <div *ngIf="!x.visible" class="col-9 text-light h3">
+          {{ x.info }}
+        </div>
+
+        <div *ngIf="x.visible" class="col-9 text-light h3">
+          {{ x.description }}
+        </div>
+      </div>
+
+      <br/>
+    </div>
+
+    <div class="col-3 d-none col-md-3 d-md-block"></div>
+  </div>
+
+</div>

@@ -1,0 +1,33 @@
+.item{
+  background-color: rgba( 80, 200, 180, 0.4);
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  border-radius: 2%;
+}
+.headder{
+  background-color: rgba(198, 96, 16, 0.7);
+}
+.author{
+  text-align: center;
+  padding: 30px;
+  min-width: 200px;
+  background-color: rgba(55, 55, 255, 0.2);
+  margin-right: 20px;
+}
+.description{
+  text-align: center;
+  padding: 30px;
+  background-color: rgba(55, 200, 255, 0.2);
+  margin-right: 20px;
+}
+.source-line{
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba( 0, 55, 255, 0.3);
+  min-height: 50px;
+  max-height: 300px;
+  display: flex;
+}
+.button{
+  margin: 0 10px;
+}
